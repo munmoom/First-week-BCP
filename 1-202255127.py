@@ -5,8 +5,7 @@
     "colab": {
       "name": "1-202255127.py",
       "provenance": [],
-      "collapsed_sections": [],
-      "authorship_tag": "ABX9TyOyTswq8u3D4TXWJrZiradJ",
+      "authorship_tag": "ABX9TyPVC44FRTPH7MXfLeQm+puK",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -30,28 +29,39 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 1,
+      "execution_count": 20,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "IVluJwxwFSni",
-        "outputId": "5d199457-f838-410a-9c83-55d5a4e782cc"
+        "id": "WQM-U5XhuBQU",
+        "outputId": "d4a596ff-d863-4cc5-a690-384f0e1a94dd"
       },
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "34\n",
-            "섭씨 34.0도는 화씨 93.20도이다.\n"
+            "리히터 규모: 3.5\n",
+            "가끔 느껴지고 미약한 피해가 발생한다(창문 흔들리고 물건 떨어짐)\n"
           ]
         }
       ],
       "source": [
-        "C = float(input())\n",
-        "F = C*(9/5) + 32\n",
-        "print(f'섭씨 {C:2.1f}도는 화씨 {F:2.2f}도이다.')"
+        "scale = float(input('리히터 규모: '))\n",
+        "\n",
+        "if scale < 3.5 :\n",
+        " print('사람이 거의 느끼지 못하지만 기록된다.')\n",
+        "elif scale <= 5.4 :\n",
+        " print('가끔 느껴지고 미약한 피해가 발생한다(창문 흔들리고 물건 떨어짐)')\n",
+        "elif 5.5 <= scale <= 6.0 :\n",
+        " print('건물에 약간의 손상이 온다.(벽균열, 서있기 곤란)')\n",
+        "elif 6.1 <= scale <= 6.9 :\n",
+        " print('사람이 사는 곳이 파괴될 수 있다.(가옥 30%이하 파괴)')\n",
+        "elif 7.0 <= scale <= 7.9 :\n",
+        " print('큰 피해를 야기한다(가옥 전파, 교량 파괴, 산사태, 지각 균열)')\n",
+        "elif 8.0 <= scale :\n",
+        " print('거대한 지진으로 모든 마을이 파괴된다.')"
       ]
     }
   ]
